@@ -4,9 +4,9 @@ applications:
   instances: 1
   memory: 256M
   routes:
-  - route: allocations-pal-rafey-ravi.pivotal.io
+  - route: allocations-pal-rafey-ravi.cfapps.io
   path: Applications/AllocationsServer/bin/Release/netcoreapp2.1/publish
   env:
-    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-rafey-ravi.pivotal.io
+    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-rafey-ravi.cfapps.io
   services:
   - tracker-allocations-database
