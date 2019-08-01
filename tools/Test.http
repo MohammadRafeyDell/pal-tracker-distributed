@@ -1,14 +1,12 @@
 ###
-curl -i -X POST -H "Content-Type: application/json" http://localhost:8883/registration -d '{"name": "Pete"}'
+curl -i -X POST -H "Content-Type: application/json" http://localhost:8883/registration -d '{"name": "Ravi"}'
+###
+curl http://localhost:8883/users/3
 
 ###
-curl -i http://localhost:8883/users/1
+curl http://localhost:8883/accounts?ownerId=3
 
 ###
-POST https://example.com/comments HTTP/1.1
-content-type: application/json
-
-{
-    "name": "sample",
-    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
-}
+curl -i -X POST -H "Content-Type: application/json" http://localhost:8883/projects -d '{"name": "Basket Weaving", "accountId": 3}'
+###
+curl -i localhost:8883/projects?accountId=<ACCOUNT-ID>
