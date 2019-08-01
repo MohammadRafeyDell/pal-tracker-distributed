@@ -27,11 +27,12 @@ namespace Backlog
         [HttpPost]
         public IActionResult Post([FromBody] StoryInfo info)
         {
-            if (!ProjectIsActive(info.ProjectId)) return new StatusCodeResult(304);
+            // if (!ProjectIsActive(info.ProjectId)) return new StatusCodeResult(304);
 
-            var record = _gateway.Create(info.ProjectId, info.Name);
-            var value = new StoryInfo(record.Id, record.ProjectId, record.Name, "story info");
-            return Created($"stories/{value.Id}", value);
+            // var record = _gateway.Create(info.ProjectId, info.Name);
+            // var value = new StoryInfo(record.Id, record.ProjectId, record.Name, "story info");
+            // return Created($"stories/{value.Id}", value);
+            return Ok();
         }
 
         private bool ProjectIsActive(long projectId)
