@@ -32,7 +32,7 @@ namespace Backlog
             // var record = _gateway.Create(info.ProjectId, info.Name);
             // var value = new StoryInfo(record.Id, record.ProjectId, record.Name, "story info");
             // return Created($"stories/{value.Id}", value);
-            return Ok();
+            return Ok("");
         }
 
         private bool ProjectIsActive(long projectId)
